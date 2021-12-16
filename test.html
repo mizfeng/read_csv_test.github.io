@@ -9,8 +9,13 @@
 github_url = window.location.origin
 repo_name = 'read_csv_test.github.io'
 csv_file_url = github_url + '/' + repo_name + '/data/' + 'rain_tk9.csv'
-content = Papa.parse(csv_file_url, {
-	download: true,
-})
+let content = []
+Papa.parse(csv_file_url, {
+  download: true,
+  header: true,
+  step: function(results) {
+    content.push(results.data)
+  },
+});
 console.log(content)
 </script>
