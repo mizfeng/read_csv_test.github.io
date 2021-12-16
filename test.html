@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
+<body>
+
+</body>
+</html>
+<script>
+github_url = window.location.origin
+repo_name = 'read_csv_test.github.io'
+csv_file_path = github_url + '/' + repo_name + '/data/' + 'tk9.csv'
+content = Papa.parse(csv_url, {
+	download: true,
+})
+console.log(content)
+</script>
+
+
